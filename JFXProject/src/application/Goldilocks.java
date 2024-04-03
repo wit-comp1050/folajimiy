@@ -14,10 +14,6 @@ public class Goldilocks extends Application {
 
     private Label outputLabel; 
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage s1) throws Exception {
         final HBox pane = new HBox(100);
@@ -53,5 +49,9 @@ public class Goldilocks extends Application {
         public void handle(ActionEvent event) {
             outputLabel.setText("Just right :)");
         }
+    }
+    
+    public static void main(String[] args) {
+        launch(args);
     }
 }

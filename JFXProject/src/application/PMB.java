@@ -17,7 +17,7 @@ public class PMB extends Application{
 
 	@Override
 	public void start(Stage s1) throws Exception {
-		final HBox pane = new HBox(100); 
+		final HBox pane = new HBox(200); 
 		pane.setAlignment(Pos.CENTER);
 		final Button btnP = new Button("Papa");
 		final Button btnM = new Button("Mama");
@@ -30,18 +30,23 @@ public class PMB extends Application{
 		s1.show();
 		
 		
+		btnB.setOnAction(new JustRight());
+//		btnP.setOnAction(new TooHot());
+//		btnM.setOnAction(new TooCold());
+		
+		
 		btnP.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 			System.out.printf("Too Hot!%n");
 			}
 			});
-
+//
 			btnM.setOnAction(e->{
 			System.out.printf("Too Cold!%n");
 			});
+//
 
-			btnB.setOnAction(new JustRight());
 	}
 	
 	private static class JustRight implements EventHandler<ActionEvent> 
@@ -51,6 +56,22 @@ public class PMB extends Application{
 		System.out.printf("Just right :)%n");
 		}
 	}
+	
+//	private static class TooCold implements EventHandler<ActionEvent> 
+//	{
+//		@Override
+//		public void handle(ActionEvent event) {
+//		System.out.printf("Too cold :)%n");
+//		}
+//	}
+	
+//	private static class TooHot implements EventHandler<ActionEvent> 
+//	{
+//		@Override
+//		public void handle(ActionEvent event) {
+//		System.out.printf("Too Hot :)%n");
+//		}
+//	}
 
 
 }

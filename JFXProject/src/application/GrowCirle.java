@@ -18,24 +18,12 @@ public class GrowCirle extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		Circle c = new Circle(50);
 		c.setStroke(Color.BLACK);
-		c.setFill(Color.WHITE);
+		c.setFill(Color.YELLOW);
 		
 		Button grow = new Button("Grow");
-		grow.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				c.setRadius(c.getRadius()+3);
-			}
-		});
 		
 		Button shrink = new Button("Shrink");
-		shrink.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				c.setRadius(c.getRadius()-3);
-			}
-		});
-
+	
 		HBox hb = new HBox();
 		hb.getChildren().add(grow);
 		hb.getChildren().add(shrink);
@@ -51,6 +39,28 @@ public class GrowCirle extends Application{
 		primaryStage.setTitle("Circle");
 		primaryStage.setScene(new Scene(vb, 200, 200));
 		primaryStage.show();
+		
+		
+		
+		grow.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				c.setRadius(c.getRadius()+3);
+			}
+		});
+		
+		
+		
+		
+		shrink.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				c.setRadius(c.getRadius()-3);
+			}
+		});
+
+		
+		
 	}
 	
 	public static void main(String[] args) {

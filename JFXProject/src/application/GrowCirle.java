@@ -48,10 +48,10 @@ public class GrowCirle extends Application{
 				c.setRadius(c.getRadius()+3);
 			}
 		});
-		
-		
-		
-		
+//		
+//		
+//		
+//		
 		shrink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
